@@ -11,7 +11,7 @@ const textLines = [
     
   );
 
-export default class home extends Component {
+class Home extends Component {
   render() {
     return (
         <section id="home">
@@ -40,3 +40,4 @@ export default class home extends Component {
     )
   }
 }
+export default Home;
