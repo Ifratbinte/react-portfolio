@@ -24,11 +24,11 @@ const PortfolioIsotop = () => {
 
                     {/* <!-- Filter Menu --> */}
                     <ul className="portfolio-menu nav nav-tabs justify-content-center border-bottom-0 mb-4">
-                        <li className="nav-item"> <a href="/" className="nav-link active" onClick={() => filterItem('portfolio')}>All</a></li>
+                        <li className="nav-item"> <a href="/" className="nav-link active" onClick={() => setItems(PortfolioContent)}>All</a></li>
                         <li className="nav-item"> <a href="/" className="nav-link" onClick={() => filterItem('portfolio')}>Portfolio</a></li>
                         <li className="nav-item"> <a href="/" className="nav-link" onClick={() => filterItem('business')}>Business</a></li>
                         <li className="nav-item"> <a href="/" className="nav-link" onClick={() => filterItem('ecommerce')}>Ecommerce</a></li>
-                        <li className="nav-item"> <a href="/" className="nav-link" onClick={() => setItems(PortfolioContent)}>Blog</a></li>
+                        <li className="nav-item"> <a href="/" className="nav-link" onClick={() => filterItem('blog')}>Blog</a></li>
                     </ul>
 
                     {/* Filter item section */}
@@ -39,7 +39,7 @@ const PortfolioIsotop = () => {
                                 items.map((elem) => {
                                     const {id, image, name, githubLink, type} = elem;
                                     return(
-                                        <div className="col-sm-6 col-lg-4 business">
+                                        <div key={elem.id} className="col-sm-6 col-lg-4">
                                             <div className="portfolio-box rounded my-3">
                                                 <div className="portfolio-img rounded"> <img className="img-fluid d-block" src={image}/>
                                                     <div className="portfolio-overlay"> 
