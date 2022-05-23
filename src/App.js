@@ -1,8 +1,8 @@
-import Home from './pages'
+import Index from './pages'
 
 function App() {
   return (
-    <Home />
+    <Index />
   );
 }
 
